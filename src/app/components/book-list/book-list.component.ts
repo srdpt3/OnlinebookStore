@@ -40,5 +40,11 @@ export class BookListComponent implements OnInit {
       ;
 
   }
+  handleSearchBooks() {
+    const keyworkd: string = this._activatedRoute.snapshot.paramMap.get('keyword');
+    this.bookService.searchBooks(keyworkd).subscribe(data => {
+      this.books = data;
+    })
+  }
 
 }
