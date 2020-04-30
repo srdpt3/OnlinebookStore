@@ -7,21 +7,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookListComponent } from './components/book-list/book-list.component';
 import { BookCategoryComponent } from './components/book-category/book-category.component';
-import { ViewPostComponent } from './post/view-post/view-post.component';
 import { SearchComponent } from './components/search/search.component';
-
+import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     BookCategoryComponent,
-    ViewPostComponent,
     SearchComponent,
+    BookDetailsComponent,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
+
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
